@@ -1,62 +1,77 @@
-# FancodeAutomation  
-API Automation Framework:
 
-This project automates the verification of user tasks using Rest Assured and TestNG. The scenario involves checking that all users from the city FanCode have completed more than 50% of their todo tasks.
+# FanCode ToDo Automation
 
-# Scenario:    
-All the users of City `FanCode` should have more than half of their todos task completed  
-   Given: User has todo tasks  
-   And: User belongs to the city FanCode  
-   Then: User's completed task percentage should be greater than 50%  
-   
-`FanCode` city can be identified by latitude between -40 to 5 and longitude between 5 to 100 in the users API.
-# Prerequisites
-+ Java 8 or higher  
-+ Maven  
-+ Git
-  
-# Setup
-1) Clone the repository:
-2) git clone https://github.com/E-Bharath/FancodeAutomation.git  
-3) cd FancodeAutomation
+## Overview
+Welcome to my automation project for the FanCode city! This project aims to verify that all users of FanCode have more than half of their todo tasks completed. The main focus is on implementing a robust framework to automate API testing.
 
-#### Install the dependencies:
-1) `mvn clean install`
+## Project Structure
+The project is structured as follows:
 
-### Running The Tests.
-1) `mvn clean test` (or)  
-2) Run `testng.xml` file in `src/test/resources/` path
+```
+├── .settings
+├── src
+│   ├── main
+│   │   └── java
+│   │       └── com
+│   │           └── fancode
+│   │               ├── common         # Contains utility classes for the project
+│   │               ├── report         # Contains report generation classes
+│   │               └── request        # Contains classes for API request handling
+│   └── test
+│       ├── java
+│       │   └── com
+│       │       └── fancode
+│       │           └── tests         # Contains test classes for automation
+│       └── resources                  # Contains test resources
+├── target                              # Maven build directory
+│   ├── classes
+│   ├── generated-sources
+│   ├── generated-test-sources
+│   ├── maven-status
+│   ├── surefire-reports                # Test execution reports
+│   ├── test-classes
+│   └── test-reports
+└── test-output                         # Output from test executions
+```
 
-## Files
-#### CommonResponseSpec, TodoUtils, CommonRequestSpec
-Contains Reusable methods  
+## Getting Started
 
-#### FanCodeTodoTest.java  
-Contains the test scenarios for verifying the users' todos completion percentage  
+### Prerequisites
+To get started with this project, ensure you have the following installed:
+- Java 17
+- Maven 3.9.9
 
-#### ReportUtils  
-Handles the setup and teardown of ExtentReports for generating test reports  
+### Setup
+1. **Clone the repository**:
+   ```bash
+   git clone <https://github.com/tushar074/FancodeAutomation.git>
+   ```
 
-#### testng.xml file  
-It is used to run the respective test file  
+2. **Navigate to the project directory**:
+   ```bash
+   cd FancodeAutomation
+   ```
 
+3. **Install dependencies**:
+   ```bash
+   mvn install
+   ```
 
+### Running Tests
+To run the automated tests, execute the following command:
+```bash
+mvn test
+```
+This will compile the project and execute all the tests defined in the `src/test/java` directory.
 
+## The Scenario
+The project automates the following scenario:
+- **Given** the user has todo tasks
+- **And** the user belongs to the city FanCode (identified by latitude between -40 to 5 and longitude between 5 to 100)
+- **Then** the user's completed task percentage should be greater than 50%
 
-## Report  
-The test results are generated using ExtentReports. After test execution, the report is available at target/extent-reports/.
+## Technologies Used
+- Java 17
+- Maven 3.9.9
 
-## Test Execution    
-The test verifies the following:
-
-1) Fetches users from the city FanCode based on latitude and longitude conditions and verifies the status code and response  
-2) Checks that all users from FanCode city have completed more than 50% of their todos.
-
-
-
-
-
-
-
-
-
+Thank you for checking out my solution!
