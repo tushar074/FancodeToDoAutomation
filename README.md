@@ -44,7 +44,7 @@ To get started with this project, ensure you have the following installed:
 ### Setup
 1. **Clone the repository**:
    ```bash
-   git clone <https://github.com/tushar074/FancodeAutomation.git>
+   git clone https://github.com/tushar074/FancodeToDoAutomation.git
    ```
 
 2. **Navigate to the project directory**:
